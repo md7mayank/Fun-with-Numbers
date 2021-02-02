@@ -15,7 +15,7 @@ app.post("/", function (req, res) {
       let bufferOriginal = Buffer.from(JSON.parse(json).data);
       let showdata = bufferOriginal.toString('utf8')
       res.write(`<p>your fact is :-</p>`)
-      res.write(`<h2 style="color:;">${showdata}</h2>`);
+      res.write(`<h2>${showdata}</h2>`);
       res.send();
     });
   });
